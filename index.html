@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Aleatorio</title>
+</head>
+<body>
+
+    <!-- ESTE ES EL ENLACE QUE VAS A CREAR -->
+    <a href="#" id="randomLink">Haz clic aquí</a>
+
+    <script>
+        document.getElementById("randomLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que el enlace se abra inmediatamente
+
+            // Lista de posibles enlaces
+            const links = [
+                "https://docs.google.com/forms/d/e/1FAIpQLSepZ4_CJQZsWMg_BpQBXFcHKkialc-IKvb_oURe3ABa3i4FfA/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLScQjs263qcZDdfErqQ13TqyF-YCLpHQ1MA55lJFM01y5RIZGw/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLScRtXE9komi4wfBv7vc102DIzIqmm0GuqBfjLcraacgRn-hWw/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLScGS4OrudVWC0N-rjw6wBizjtrGLFhtph-gzpAI0JCZX99yKg/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLSfmcZt9n-dkkNMRin2QmGxXzI3SduMlk5HwpYO0XS0pdVR3yg/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLSeTGJQ5tLPPpPJeyWR8GN3vmBvp6zj-gHnnu7j2mPNM_XtS-g/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLScFvzGgKpXFtJST-qF8aK99YyWfD77DV9ovWWxXhLx07mCmlQ/viewform?usp=sf_link",
+                "https://docs.google.com/forms/d/e/1FAIpQLSd3zl6-wLtKgY4h0H6neOgkSl18Qxgx-Zl4hMv-Q8wzDcMWvQ/viewform?usp=sf_link"
+            ];
+
+            // Elegir un enlace al azar
+            const randomIndex = Math.floor(Math.random() * links.length);
+            const randomURL = links[randomIndex];
+
+            // Redirigir al usuario
+            window.location.href = randomURL;
+        });
+    </script>
+
+</body>
+</html> 
